@@ -4,6 +4,22 @@ class Api::V2::MessagesController < ApplicationController
         render json: messages
     end
 
+    def update
+        message = Message.find(params[:id])
+        message.update(message_params)
+        render json: message
+    end
+
+    def destroy
+        message = ''
+        if Message.find(params[:id]).destroy
+            message = {message:'Message was deleted'}
+        else
+            message = {message:'Something went wrong'}
+        end
+        render json: message
+    end
+
     def create
         byebug
         message = Message.create(message_params)
