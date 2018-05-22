@@ -1,7 +1,7 @@
 class Api::V2::MessagesController < ApplicationController
     def index
-        message = Message.all.sample
-        render json: message
+        messages = Message.all
+        render json: messages
     end
 
     def create
