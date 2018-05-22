@@ -1,6 +1,6 @@
 class Api::V2::MessagesController < ApplicationController
     def index
-        messages = Message.all
+        messages = Message.order(updated_at:'desc')
         render json: messages
     end
 
