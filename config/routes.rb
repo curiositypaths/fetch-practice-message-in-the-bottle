@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     namespace :v2 do
       resources :messages
       resources :gifs
-      esources :users, only:[:index]
+      resources :users, only:[:index]
     end
   end
 end
