@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+students = ["Austin Paley", "Brie Morales", "Yong-Nicholas Kim", "Gui Bin Zhang", "William Dale", "Roger Perez", "Michael Myung", "Shun Yao", "Ryan O'Toole", "AHAMED ABBAS", "Daniel Brazel", "Joe Greiner", "Matthew Talbot", "Shawn Tannor", "Lane Miller", "Jesse Horwitz", "Celeste Gerard", "Ian Pollack", "Ryan Hu"]
+
+students.each do |student_name|
+    User.create({name:student_name})
+end
